@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 //Create schema of members here
 const UserSessionSchema = new Schema({
-  nome_usuario: {
+  nome: {
     type: String,
     required: [true, "Nome de usúario é obrigatório"],
   },

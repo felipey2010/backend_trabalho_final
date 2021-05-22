@@ -18,7 +18,7 @@ module.exports = {
     if (data.length > 0) {
       return res.json({
         success: false,
-        message: "Email",
+        message: "Email already exist",
       });
     } else {
       Users.create(req.body)
@@ -142,8 +142,3 @@ module.exports = {
     });
   },
 };
-
-//Tutorial
-/*
-https://www.youtube.com/watch?v=2jqok-WgelI
-*/

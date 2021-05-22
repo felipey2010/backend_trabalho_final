@@ -40,13 +40,11 @@ module.exports = {
               .then(result => {
                 const userDetails = {
                   isAdmin: user.isAdmin,
-                  isActivated: user.isActivated,
                   isLoggedIn: user.isLoggedIn,
                   dateCreated: user.dateCreated,
                   id: user._id,
-                  nome_completo: user.nome_completo,
+                  nome: user.nome,
                   email: user.email,
-                  nome_usuario: user.nome_usuario,
                   lastLoggedIn: user.lastLoggedIn,
                   lastLoggedOut: user.lastLoggedOut,
                 };
@@ -98,13 +96,11 @@ module.exports = {
           } else {
             const userDetails = {
               isAdmin: user.isAdmin,
-              isActivated: user.isActivated,
               isLoggedIn: user.isLoggedIn,
               dateCreated: user.dateCreated,
               id: user._id,
-              nome_completo: user.nome_completo,
+              nome: user.nome,
               email: user.email,
-              nome_usuario: user.nome_usuario,
             };
             return res.status(200).json({
               success: true,

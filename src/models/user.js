@@ -3,9 +3,9 @@ const Schema = mongoose.Schema;
 const bcrypt = require("bcrypt");
 const saltRound = 10;
 
-//Create schema of members here
+//Create schema of users here
 const UserSchema = new Schema({
-  nome_completo: {
+  nome: {
     type: String,
     required: [true, "Nome é obrigatório"],
   },
@@ -14,19 +14,11 @@ const UserSchema = new Schema({
     unique: true,
     required: [true, "Informe o email"],
   },
-  nome_usuario: {
-    type: String,
-    required: [true, "Informe o nome de usúario"],
-  },
   senha: {
     type: String,
     required: [true, "Informe a senha"],
   },
   isAdmin: {
-    type: Boolean,
-    default: false,
-  },
-  isActivated: {
     type: Boolean,
     default: false,
   },
