@@ -16,7 +16,9 @@ requireDir("./src/models");
 app.use("/api", routes);
 
 //URL of the database
-const DB_CONNECT = process.env.DB_CONNECT;
+const DB_CONNECT =
+  process.env.DB_CONNECT ||
+  "mongodb+srv://arquitetura:arquitetura2021@cluster0.lwb9i.mongodb.net/blog?retryWrites=true&w=majority";
 const PORT = process.env.PORT || 5001;
 
 //connect to database
